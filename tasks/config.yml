@@ -15,7 +15,8 @@
   uri:
     url: "http://{{role_syncthing_api}}/rest/system/config"
     return_content: yes
-    HEADER_X-API-Key: "{{syncthing_apikey}}"
+    headers:
+      X-API-Key: "{{syncthing_apikey}}"
   register: syncthing_config_raw
   check_mode: no
 

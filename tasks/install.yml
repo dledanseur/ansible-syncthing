@@ -21,7 +21,7 @@
     - 'sysctl add'
 
 - name: other based distros
-  include: os_other.yml
+  include_tasks: os_other.yml
   when: (ansible_os_family != 'Debian' and
          ansible_os_family != 'Archlinux')
 
